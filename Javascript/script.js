@@ -19,3 +19,32 @@ menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("span-anime");
 });
    
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const celular = document.getElementById("celular");
+  const desktop = document.getElementById("desktop");
+  const sectionProjetos = document.getElementById("projetos");
+
+  function animarQuandoVisivel() {
+      const sectionTop = sectionProjetos.getBoundingClientRect().top;
+      const sectionBottom = sectionProjetos.getBoundingClientRect().bottom;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight * 0.75 && sectionBottom > 0) {
+          // Se a seção estiver visível, adiciona a animação
+          celular.classList.add("ativo");
+          desktop.classList.add("ativo");
+      } else {
+          // Se a seção sair da tela, remove a classe para resetar a animação
+          celular.classList.remove("ativo");
+          desktop.classList.remove("ativo");
+      }
+  }
+
+  window.addEventListener("scroll", animarQuandoVisivel);
+});

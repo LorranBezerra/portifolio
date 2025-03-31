@@ -418,7 +418,7 @@ h2{
 .projetos{
    z-index: 1; /* Garante que os cards fiquem sobre o vídeo */
     background: linear-gradient(to right, #54a2fccc, #a9cdf7cc);
-    border-radius: 15px;
+    border-radius: 50px;
     position: relative;
     overflow: hidden; /* Evita que o vídeo ultrapasse os limites da seção */
 }
@@ -505,7 +505,20 @@ font-weight: bold;
 }
 
 
-
+#celular {
+  opacity: 0;
+  transform: translateY(-100px); /* Começa acima da tela */
+  transition: transform 3s ease-out, opacity 3s ease-out;
+}
+#desktop {
+  opacity: 0;
+  transform: translateY(100px); /* Começa debaixo da tela */
+  transition: transform 3s ease-out, opacity 3s ease-out;
+}
+#celular.ativo, #desktop.ativo {
+  opacity: 1;
+  transform: translateY(0); /* Volta para a posição normal */
+}
 
 
 
@@ -537,14 +550,15 @@ h3{
   align-items: center;
   margin-top: 30px;
   width: 100%;
+
+  
 }
 
 .timeline-item {
   display: flex;
   align-items: center;
-  width: 80%;
-  max-width: 900px;
-  margin: 40px;
+  width: 90%;
+  margin: 5%;
   padding: 0%;
   position: relative;
 }
@@ -556,7 +570,7 @@ h3{
 }
 
 .right {
-  text-align: left;
+  text-align: right;
 }
 p {
   margin: 5px 0;
@@ -617,3 +631,16 @@ p {
   .center::before {
       display: none; /* Remove a linha vertical no mobile */
   }
+}
+
+
+
+/* section sobre mim */
+
+.sobre{
+  z-index: 1; /* Garante que os cards fiquem sobre o vídeo */
+   background: #54a2fccc;
+   border-radius: 50px;
+   position: relative;
+   overflow: hidden; /* Evita que o vídeo ultrapasse os limites da seção */
+}

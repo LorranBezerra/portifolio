@@ -148,9 +148,34 @@
         </div>
     </div>
 </section>
+
 <!-- sobre -->
 <section class="sobre" id="sobre">
-  <h4 style="color: black;">Por que me <span style="color: #ffffff;">Contratar </span>?</h4>
+  <h4 id="pq-me-contratar" style="color: black;">Por que me <span style="color: #ffffff;">Contratar </span>?</h4>
+  
+  <video autoplay loop muted playsinline id="video-contrato">
+    <source src="/Imagens/mecontrate.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos em HTML5.
+  </video>
+
+  <div class="cardcv">
+    <div class="text-content">
+        <span class="title">Jr</span>
+        <p class="subtitle">Frontend Developer</p>
+    </div>
+    <button class="download-btn">Curriculo
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="icon">
+            <path fill-rule="evenodd" d="M22.1,77.9a4,4,0,0,1,4-4H73.9a4,4,0,0,1,0,8H26.1A4,4,0,0,1,22.1,77.9ZM35.2,47.2a4,4,0,0,1,5.7,0L46,52.3V22.1a4,4,0,1,1,8,0V52.3l5.1-5.1a4,4,0,0,1,5.7,0,4,4,0,0,1,0,5.6l-12,12a3.9,3.9,0,0,1-5.6,0l-12-12A4,4,0,0,1,35.2,47.2Z"></path>
+        </svg>
+    </button>
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="background-icon">
+        <path stroke-width="5" stroke-miterlimit="10" d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z"></path>
+    </svg>
+</div>
+
+<p id="descrição-sobre">descrição de algo sobre a minha carreira/motivos pra me contratar</p>
+<p id="certificado">x certificados</p>
+<p id="certificado-cursos">centificados do curso tal</p>
 
 </section>
 <!-- comentarios -->
@@ -165,8 +190,72 @@
 <!-- contatos -->
  <section class="contatos" id="contatos">
 
+
+
  </section>
 
+<footer class="footer">
+    <div class="footer-container" id="div-linkedin">
+        <h5 id="txt-div-linkedin">Vamos nos conectar lá</h5>
+        <button class="Btn-linkedin">
+          <div class="sign">
+            <svg
+              fill="white"
+              class="svgIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="1.6em"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+              ></path>
+            </svg>
+          </div>
+        
+          <div class="text">Linkedln</div>
+        </button>
+    </div>
+    <div id="linha"></div>
+    <div class="footer-content">
+        <div class="profile">
+          <img src="/Imagens/Lorran Rodrigues.gif" alt="Logo" />
+            <p class="username">textinho</p>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <h id="nav-rodape" style="color: #0369a1;">navegação</h>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">sobre Us</a></li>
+                <li><a href="#">serviços</a></li>
+                <li><a href="#">resumo</a></li>
+                <li><a href="#">projetos</a></li>
+            </ul>
+        </div>
+
+        <div class="contacts">
+            <h style="color: #0369a1;">Contatos</h>
+            <p>+55 081234908324</p>
+            <p>rodriguesbromen@gmail.com</p>
+            <p>romao_men</p>
+        </div>
+
+        <div class="newsletter">
+            <h style="color: #0369a1; ">Obtenha as informações mais recentes</h>
+            <form>
+                <input type="email" placeholder="endereço de email" required>
+                <button type="submit">⟶</button>
+            </form>
+        </div>
+    </div>
+   <div id="linha"></div>
+</footer>
 </body>
 <script src="\Javascript\script.js"></script>
 </html>

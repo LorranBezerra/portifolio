@@ -51,3 +51,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+const carousel = document.getElementById("carousel");
+        let cards = document.querySelectorAll(".card");
+        let index = 0;
+
+        function nextSlide() {
+            index++;
+            if (index >= cards.length) {
+                index = 0;
+            }
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            index--;
+            if (index < 0) {
+                index = cards.length - 1;
+            }
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const offset = -index * (cards[0].offsetWidth + 20);
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+
+        document.getElementById("next").addEventListener("click", nextSlide);
+        document.getElementById("prev").addEventListener("click", prevSlide);
+
+        setInterval(nextSlide, 10000); // Troca automática a cada 3 segundos

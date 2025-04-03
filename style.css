@@ -232,6 +232,34 @@ section {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section home */
 
 .home{
@@ -485,6 +513,29 @@ h2{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section projetos */
 
 .projetos{
@@ -522,27 +573,19 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
-  
   .card:hover {
     flex: 2;
     background-color: #b8b8b8;
   }
-
-
 .text-section-projetos{
     color: #fff;
-    
-
 
 }
-
   /* fundo de section projetos */
 
   .fundo-projetos {
     position: absolute;
-    
     top: 0;
     left: 0;
     width: 100%;
@@ -575,8 +618,6 @@ color: #111;
 font-family: "Urbanist", sans-serif;
 font-weight: bold;
 }
-
-
 #celular {
   opacity: 0;
   transform: translateY(-100px); /* Começa acima da tela */
@@ -591,6 +632,92 @@ font-weight: bold;
   opacity: 1;
   transform: translateY(0); /* Volta para a posição normal */
 }
+
+@media (min-width:900px) and (max-width: 1399px) {
+  #desktop{
+top: 5%;
+left: 5%;
+z-index: -1; /* Mantém o vídeo no fundo */
+width: 25%;
+  }
+  #desktop {
+    opacity: 0;
+    transform: translateY(-100px); /* Começa debaixo da tela */
+    transition: transform 3s ease-out, opacity 3s ease-out;
+  }
+  .container_pj {
+    display: flex;
+    gap: 10px;
+    margin: 5%;
+    background-color: #666;  
+    position: absolute;
+    z-index: 1; /* Garante que os cards fiquem sobre o vídeo */
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    width: 90%;
+  }
+  #celular{
+    z-index: -1; /* Mantém o vídeo no fundo */
+    position: absolute;
+    top: 10%;
+    width: 10%;
+    right: 10%;
+    
+  }
+  #meus-projetos{
+    font-size: 80px;
+  }
+}
+
+@media (min-width:350px) and (max-width: 899.99px) {
+  #desktop{
+display: none;
+  }
+  .container_pj {
+    display: flex;
+    gap: 10px;
+    margin: 5%;
+    background-color: #666;  
+    position: absolute;
+    z-index: 1; /* Garante que os cards fiquem sobre o vídeo */
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -704,6 +831,24 @@ p {
       display: none; /* Remove a linha vertical no mobile */
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -830,6 +975,39 @@ p {
   transform: scale(1.25);
 }
 
+@media (min-width:300px) and (max-width: 900px) {
+
+  #video-contrato{
+    position: absolute;
+    left: -25%;
+    bottom: 0;
+    width: 70%;
+    height: 50%;
+    z-index: -1; /* Mantém o vídeo no fundo */
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section comentarios */
 
 .comentarios{
@@ -912,6 +1090,20 @@ justify-content: center;}
 .card:hover .card__arrow svg {
   transform: translateX(3px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1013,10 +1205,279 @@ justify-content: center;}
   font-size: 45px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* section post-linkedin */
 .post-linkedin{
   background-color: #ffffff93;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden; 
 }
+.div-all-post{
+  position: absolute; /* Ou fixed se quiser fixo ao rolar */
+  top: 10%;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Espaço entre os itens */
+  padding: 10px 20px;
+  
+}
+
+#txt-post{
+  color: #000;
+  font-size: 48px;
+ 
+}
+.btn-all-post{
+  background-color: #2b2b2b;
+  border: 1px solid #0077b5;
+  padding: 5px;
+  position: relative;
+  width: 7.9em;
+  height: 2em;
+  transition: 0.5s;
+  font-size: 17px;
+  border-radius: 1em;
+  gap: 10px;
+}
+
+.btn-all-post #txt-btn-send-all {
+  position: absolute;
+  top: 0.6em;
+  left: 1em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: #ffffff;
+}
+
+.btn-all-post svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff
+}
+
+.btn-all-post:hover #txt-btn-send-all {
+  left: 0.6em;
+  color: #fff
+}
+
+.btn-all-post:hover svg {
+  opacity: 1;
+}
+
+.btn-all-post:hover {
+  background-color: #0077b5;
+}
+
+/* card post linkedin */
+.card-post-linkedin {
+  --black: 0, 0%, 0%;
+  --white: 0, 0%, 100%;
+  --black-muted: 0, 0%, 13%;
+  --white-smoke: 0, 0%, 89%;
+  --green-light: 87, 73%, 63%;
+  --gap: 12px;
+  --w-card: 330px;
+  --h-card: 280px;
+  --p-card: 1rem;
+  --gap-action: 6px;
+  --sz-action: 58px;
+  --index-action: 2;
+  --round-card: calc(var(--sz-action) / 2 + calc(var(--gap-action) / 2));
+
+  width: var(--w-card);
+  height: var(--h-card);
+  border-radius: var(--round-card);
+  position: relative;
+  background-color: #0034f0d2;
+  padding: var(--p-card);
+  box-shadow: rgba(0, 0, 0, 0.1) -1.95px -1.95px 2.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.corner {
+  position: absolute;
+  display: flex;
+  right: 0;
+  bottom: 0; /* Move o corner para baixo */
+  background-color: #ffffff;
+  z-index: 2;
+  border-top-left-radius: var(
+    --round-card
+  ); /* Ajusta o arredondamento para o canto inferior direito */
+  padding: var(--gap-action);
+}
+
+.corner .action {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  height: var(--sz-action);
+  min-height: var(--sz-action);
+  max-height: var(--sz-action);
+  width: var(--sz-action);
+  min-width: var(--sz-action);
+  max-width: var(--sz-action);
+  border: none;
+  outline: none;
+  transition: all 0.5s ease;
+  background-color: #e2e2e29f;
+  color: hsl(var(--black-muted));
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.07) 0px 1px 2px,
+    rgba(0, 0, 0, 0.07) 0px 2px 4px;
+}
+.corner .action:hover {
+  background-color: #268aff;
+}
+.corner .action svg {
+  width: 32px;
+  height: 32px;
+}
+.corner .action:hover svg {
+  color: white;
+}
+
+.corner i[data-corner] {
+  position: absolute;
+  width: 10%;
+  height: 50%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 100%;
+  right: 110%;
+  bottom: -21%;
+
+  transform: rotate3d(1000, 1000, 80, 3.142rad);
+}
+
+.content-post::after {
+  position: absolute;
+  content: "";
+  top: -8%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%);
+  background: #becaf593;
+  z-index: -2;
+  transform-origin: bottom;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: var(--round-card);
+}
+
+.content-post .para {
+  z-index: 1;
+  opacity: 1;
+  font-size: 18px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content-post::before {
+  position: absolute;
+  content: "";
+  top: -4%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%);
+  background: #ced8ff;
+  z-index: -1;
+  transform-origin: bottom;
+  border-radius: var(--round-card);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card-post{
+  position: absolute; /* Ou fixed se quiser fixo ao rolar */
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 10%;
+  padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

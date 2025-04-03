@@ -80,3 +80,9 @@ const carousel = document.getElementById("carousel");
         document.getElementById("prev").addEventListener("click", prevSlide);
 
         setInterval(nextSlide, 10000); // Troca automática a cada 3 segundos
+
+
+
+// carrosel post do linkedin
+
+
